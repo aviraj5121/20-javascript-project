@@ -119,15 +119,55 @@ background: linear-gradient(45deg, rgba(34,195,177,1) 0%, rgba(143,240,133,1) 47
     </header>
     <main>
         <div class="box-1">
-            <dIV class="box-2">
+            <dIV class="box-2" id="time">
                 00 : 00 : 00 : 000
             </dIV>
             <div>
-                <button type="button" class="start">Start</button>
-                <button type="button" class="Stop">stop</button>
-                <button type="reset" class="Restart">Restart</button>
+                <button type="button" class="start" id="start-1">Start</button>
+                <button type="button" class="Stop" id="stop-2">stop</button>
+                <button type="reset" class="Restart" id="restart-1">Restart</button>
             </div>
         </div>
     </main>
 </body>
+<script>
+    let [milliseconds,seconds,minutes,hours] = [0,0,0,0];
+let timerRef = document.querySelector('.box-2');
+let int = null;
+document.getElementById('start-1').addEventListener('click', ()=>{
+    if(int!==null){
+        clearInterval(int);
+    }
+    int = setInterval(displayTimer,10);
+});
+document.getElementById('stop-2').addEventListener('click', ()=>{
+    clearInterval(int);
+});
+document.getElementById('restart-1').addEventListener('click', ()=>{
+    clearInterval(int);
+    [milliseconds,seconds,minutes,hours] = [0,0,0,0];
+    timerRef.innerHTML = '00 : 00 : 00 : 000 ';
+});
+function displayTimer(){
+    milliseconds+=10;
+    if(milliseconds == 1000){
+        milliseconds = 0;
+        seconds++;
+        if(seconds == 60){
+            seconds = 0;
+            minutes++;
+            if(minutes == 60){
+                minutes = 0;
+                hours++;
+            }
+        }
+    }
+ let h = hours < 10 ? "0" + hours : hours;
+ let m = minutes < 10 ? "0" + minutes : minutes;
+ let s = seconds < 10 ? "0" + seconds : seconds;
+ let ms = milliseconds < 10 ? "00" + milliseconds : milliseconds < 100 ? "0" + milliseconds : milliseconds;
+ timerRef.innerHTML = ` ${h} : ${m} : ${s} : ${ms}`;
+}
+
+</script>
 </html>

@@ -1,0 +1,35 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.nav-bar
+        {
+            min-width: 200px;
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            background-color: rgb(61, 61, 61);
+        }
+.nav-bar ul
+        {
+            list-style: none;
+        }
+.nav-bar li
+        {
+
+            padding-top: 5px;
+            display: inline-block;
+            margin-left: 20px;
+            min-width: 20px;
+        }
+.nav-bar input[type=text] 
+{
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 12px;
+            display: flex;
+            align-items: right;
+            justify-content: right;
+            text-align: left;
+
+}

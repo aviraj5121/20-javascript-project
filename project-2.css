@@ -43,4 +43,12 @@ li a
     align-items: flex-end;
     justify-content: flex-end;
 }
-
+h2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100wh;
+    font-size: 20wh;
+    
+}

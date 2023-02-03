@@ -1,0 +1,107 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    background: linear-gradient(-135deg,#c850c0,#4158d0);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.box-1
+{
+    padding: 0px;
+    position: absolute;
+    top: 50%;
+    transform: translate(50%, -50%);
+    background-color: #fff;
+    height: 660px;
+    width: 960px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-2
+{   
+    border-radius: 10px;
+    height: 100%;
+    width: 50%;
+    
+}
+.box-3
+{
+    border-radius: 10px;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+.heading
+{  
+    position: absolute;
+    top: 60px;
+    animation: glow 1s ease-in-out infinite alternate;
+    font-size: 32px;
+
+}
+.email input
+{
+
+    margin: 10px;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right:50px;
+    border-radius: 20px;
+    background-color: rgb(196, 196, 196);
+    border-width: 0px;
+}
+.password input
+
+{ 
+    margin: 10px;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right:50px;
+    border-radius: 20px;
+    border-width: 0px;
+    background-color: rgb(198, 198, 198);
+}
+.login input
+{
+    background-color: #4CAF50;
+    border: none;
+    margin: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 275px;
+}
+.forget a:link
+{
+    color: silver;
+    text-decoration: none;
+}
+.create
+{
+    position: absolute;
+    bottom: 60px;
+}
+.create a:link
+{
+
+    text-align: center;
+
+    color: silver;
+    text-decoration: none;
+}

@@ -1,3 +1,5 @@
+[![Wakatime](https://wakatime.com/badge/github/aviraj5121/HTML-practice.svg)](https://wakatime.com/badge/github/aviraj5121/HTML-practice)
+[![Gitstats](https://gitstats.me/github/aviraj5121/HTML-practice/badge/monthly.svg)](https://gitstats.me/github/aviraj5121/HTML-practice)
 <html>
   <head>
     <style>
@@ -39,10 +41,9 @@
   
   <body>
     <div class="container">
-      <img src="https://avatars2.githubusercontent.com/u/12345678?v=4" alt="Profile Picture">
       <h1>Your Name</h1>
       <p>Web Developer</p>
-      <a href="https://github.com/username">Github Profile</a>
+      <a href="https://github.com/aviraj5121">Github Profile</a>
     </div>
   </body>
 </html>

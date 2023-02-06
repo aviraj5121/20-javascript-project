@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background: rgb(77,28,14);
+            background: linear-gradient(158deg, rgba(77,28,14,1) 0%, rgba(255,235,0,1) 0%, rgba(201,193,89,1) 58%, rgba(235,167,130,1) 100%);;
+
+        }
+        .box-1
+        {
+            background-color: rgb(255, 210, 96);
+            height: 500px;
+            width: 1000px;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+        }
+        input
+        {
+            position: absolute;
+            top: 40%;
+            left: 25%;
+            height: 30px;
+            width: 500px;
+        }
+        p
+        {   
+            padding: 10px;
+            position: absolute;
+            top: 70%;
+            left: 40%;
+            text-align: center;
+            font-size: 20PX;
+        }
+        button
+        {
+            position: absolute;
+            top: 90%;
+            left: 45%;
+            font-size: larger;
+            
+        }
+</style>
+</head>
+<body>
+    <div class="box-1" id="box-1">
+        <input type="text" id ="value">
+        <p id="hello">SEND MESSAGE</p>
+        <button onclick="message()">NEXT</button>
+    </div>
+</body>
+<script>
+    function message()
+    {
+        let x = "NULL"
+        x = document.getElementById("value").value;
+        x=x.toUpperCase()
+        document.getElementById("hello").innerHTML=x;
+        document.getElementById("value").value = "";
+    }
+</script>
+</html>

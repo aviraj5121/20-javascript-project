@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote</title>
+</head>
+<script>
+    var x = 1
+    var arr1=["Angelina Jolie","Queen Latifah","Salma Hayek","Ann Ruth Schabacker","Eleanor C.Wood"]
+    var arr =["The only way to have a life is to commit to it like crazy",
+                "Believe in yourself. Stay in your own lane. There's only one you",
+                "Experience is not what happens to you; it is what you do with what happens to you",
+                "Each day comes bearing its gifts. Untie the ribbon.","Living is the art of getting used to what we didn’t expect"]
+    function next ()
+    {
+        if(x<arr.length)
+        {
+            document.getElementById("first").innerHTML=arr1[x];
+            document.getElementById("second").innerHTML=arr[x];
+            x=x+1
+        }
+        else
+        {
+            x=1
+            document.getElementById("first").innerHTML=arr1[0];
+            document.getElementById("second").innerHTML=arr[0];
+        }
+    }
+    function prev ()
+    {
+        x = (x - 1 + arr1.length) % arr1.length;
+        document.getElementById("first").innerHTML = arr1[x];
+        document.getElementById("second").innerHTML=arr[x];
+        }
+    
+    
+</script>
+<body>
+    <div class="box-1">
+        <button class="prev" onclick="prev()">&#10094;</button>
+        <div class="box-2">
+            <p id="first">Angelina Jolie </p>
+            <p id="second">The only way to have a life is to commit to it like crazy</p>
+        </div>
+        
+        <button class="next" onclick="next()">&#10095;</button>
+    </div>
+</body>
+<style>
+    body
+    {
+        background-color: rgb(0, 0, 0 ,0.7);
+        background-image: url("https://images.unsplash.com/photo-1486848538113-ce1a4923fbc5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=749&q=80");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .box-2
+    {
+        text-align: center;
+        height: 300px;
+        width: 700px;
+        background-color: rgb(0, 0, 0 ,0.7);
+        border: 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+    }
+    .box-2 p
+    {
+        text-align: center;
+        font-size: larger;
+        color: white;
+    }
+    #first
+    {
+        position: absolute;
+        top: 30%;
+
+    }
+    #second
+    {
+        padding: 5px;
+        position: absolute;
+        top: 50%;
+
+    }
+
+button.next,
+button.prev {
+
+  width: auto;
+  padding: 16px;
+ 
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.box-1
+{   display: flex;
+    height: 500px;
+    width: 800px;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+        top: 30%;
+        left: 30%;
+}
+
+</style>
+</html>

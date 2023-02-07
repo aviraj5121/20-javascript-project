@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slider</title>
+</head>
+<style>
+    body
+    {
+        background-color: black; /* For browsers that do not support gradients */
+        background-image: conic-gradient(rgb(255, 145, 145), rgb(255, 0, 43), red, yellow, rgb(231, 154, 154));
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+    }
+    img 
+    {
+    box-shadow: 10px 5px 5px 5px rgb(255, 145, 145);
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 1000px;
+    height: 500px;
+    object-fit: cover;
+}
+
+</style>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <img src="images/erik-knoef-5sv3BFa4Cco-unsplash.jpg" alt="Image 1">
+            <img src="images/dipanshu-daga-HOe0W_moNn4-unsplash.jpg" alt="Image 2">
+            <img src="images/rahul-pande-KwJk1fy03Y4-unsplash.jpg" alt="Image 3">
+        </div>
+    </div>
+    <script>
+        const slider = document.querySelector(".slider");
+        const slides = document.querySelectorAll(".slides img");
+
+        let index = 0;
+
+        const changeSlide = () => {
+        for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+        index++;
+        if (index >= slides.length) {
+                index = 0;
+        }
+
+        slides[index].style.display = "block";
+        };
+
+setInterval(changeSlide, 3000);
+    </script>
+</body>
+</html>

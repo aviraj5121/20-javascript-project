@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+        var x = 0
+        function add()
+        {
+            
+            x=x+1
+            document.getElementById("count").innerHTML=x
+            if(x==0)
+            (
+                document.getElementById("count").style.color="black"
+            )
+            if(x>0)
+            {
+                document.getElementById("count").innerHTML=x
+                document.getElementById("count").style.color="green"
+            }
+        }
+        function sub()
+        {
+            x=x-1
+            document.getElementById("count").innerHTML=x
+            if(x<0)
+            {
+                document.getElementById("count").innerHTML=x
+                document.getElementById("count").style.color="red"
+            }
+            if(x==0)
+            (
+                document.getElementById("count").style.color="black"
+            )
+        }
+
+</script>
+</head>
+<body>
+    <div>
+        <h3>COUNTER</h3>
+        <p id="count" style="text-decoration-color: brown;">
+            0
+        </p>
+        <button onclick="add()">ADD  COUNT</button>
+        <br>
+        <button onclick="sub()">LOWER COUNT</button>
+    </div>
+</body>
+<style>
+    body
+    {
+        background-image: linear-gradient(#6e204a, #d5368c, #ea7cb7, #fbe7f2); 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    div
+    {
+        position: absolute;
+        top: 30%;
+        left: 40%;
+        border: 2px;
+        border-color: blueviolet;
+        height: 400px;
+        width: 400px;
+        background-color: rgb(227, 158, 190);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;    
+        box-shadow: 10px 5px 5px 5px #6e204a;
+    }
+    h3
+    {   
+        margin: 10px;
+        text-align: center;
+        font-size: 40px;
+    }
+    #count
+    {
+        margin: 40px;
+        padding: 5px;
+        font-size: 100px;
+        text-align: center;
+    }
+    button
+    {
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+    }
+</style>
+</html>

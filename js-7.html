@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>TIP CALCULATOR</h3>
+        <div>
+            <input type="text" id="Amount"><br>
+            <input type="text" id="people"><br>
+            <input type="text" id="tip"><br>
+            <button onclick="calculate()">Calculate</button>
+        </div> 
+    </div>
+</body>
+<script>
+    function calculate()
+    {
+        var amount =  parseFloat(document.getElementById("Amount").value)
+        var number =  parseFloat(document.getElementById("people").value)
+        var tip =  parseFloat(document.getElementById("tip").value)
+        if(isNaN(amount) || isNaN(number) || isNaN(tip))
+        {
+            alert("invalid input")
+        }
+        else
+        {
+        var total = amount + (amount*tip)/100
+        var given_amount = total/number
+        }console.log(given_amount)
+    }  
+    
+
+</script>
+</html>

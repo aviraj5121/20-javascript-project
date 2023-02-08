@@ -7,6 +7,20 @@
     <title>Document</title>
 </head>
 <style>
+    body
+    {
+        background-color: #f44336;
+        animation-name: example;
+        animation-duration: 4s;
+    }
+    @keyframes example 
+    {
+        0%   {background-color:#2196f3; left:0px; top:0px;}
+        25%  {background-color:#4caf50; left:200px; top:0px;}
+        50%  {background-color:#ffeb3b; left:200px; top:200px;}
+        75%  {background-color:#9c27b0; left:0px; top:200px;}
+        100% {background-color:#f44336; left:0px; top:0px;}
+    }
     .box-1
     {   position: absolute;
         top: 40%;
@@ -46,7 +60,6 @@
             <button id="2">2</button>
             <button id="3">3</button>
             <button id="4">4</button>
-            <br>
             <button id="5">5</button>
             <button id="6">6</button>
             <button id="7">7</button>
@@ -57,10 +70,7 @@
             <button id="-">-</button>
             <button id="*">*</button>
             <button id="+">+</button>
-            <br>
             <button id="C">C</button>
-            <button id="backspace">backspace</button>
-
         </div>
     </div>  
 </body>
@@ -70,7 +80,9 @@
     button.addEventListener("click", function() {
         if (this.textContent === "=") {
                 output.value = eval(output.value);
-            } else {
+            } 
+            else 
+            {
                 output.value += this.textContent;
             }
         

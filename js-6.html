@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box-1
+    {   position: absolute;
+        top: 40%;
+        left: 40%;
+        height: 350px;
+        width: 500px;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+    }
+    .box-2
+    {
+        margin: 0px;
+        padding: 0px;
+    }
+    .box-2 input
+    {
+        margin-top: 10px;
+        width: 98.3%;
+        height: 50px;
+    }
+    .box-3 button
+    {
+        margin: 0px;
+        height: 50px;
+        width: 24%;
+
+    }
+</style>
+<body>
+    <div class="box-1">
+        <div class="box-2">
+            <input type="text" id="output">
+        </div>
+        <div class="box-3">
+            <button id="1">1</button>
+            <button id="2">2</button>
+            <button id="3">3</button>
+            <button id="4">4</button>
+            <br>
+            <button id="5">5</button>
+            <button id="6">6</button>
+            <button id="7">7</button>
+            <button id="8">8</button>
+            <button id="9">9</button>
+            <button id="0">0</button>
+            <button id="=">=</button>
+            <button id="-">-</button>
+            <button id="*">*</button>
+            <button id="+">+</button>
+            <br>
+            <button id="C">C</button>
+            <button id="backspace">backspace</button>
+
+        </div>
+    </div>  
+</body>
+<script>
+    const output = document.querySelector("#output");
+    document.querySelectorAll("button").forEach(button => {
+    button.addEventListener("click", function() {
+        if (this.textContent === "=") {
+                output.value = eval(output.value);
+            } else {
+                output.value += this.textContent;
+            }
+        
+    });
+    });
+    document.getElementById("C").addEventListener("click", function() {
+        document.getElementById("output").value="";    
+    });
+</script>
+</html>

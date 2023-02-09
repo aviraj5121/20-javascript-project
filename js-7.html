@@ -6,19 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+body{
+    background-color: skyblue;
+}
+.box-1
+{
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    min-height: 4px;
+    height: auto;
+    width: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 10px;
+}
+.box-1 h3
+{
+    background-color: darkblue;
+    width: 100%;
+    color: white;
+    font-family: sans-serif;
+    padding-top: 10px;
+    text-align: center;
+    margin-top: 0px;
+    height: 30px;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.box-3
+{
+    display: block;
+    margin-left: 20px;
+}
+label
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+    
+}
+input
+{
+    width: 80%;
+    height: 30px;
+}
+button
+{
+
+    font-size: 25px;
+    background-color: darkblue;
+    color: rgb(255, 255, 255);    
+    bottom: 10px;
+    margin: 20px;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+}
+</style>
 <body>
-    <div>
+    <div class="box-1">
         <h3>TIP CALCULATOR</h3>
-        <div>
-            <input type="text" id="Amount"><br>
+        <div class="box-3">
+            <label for="Amount">How Much Was Your Bill ?</label>
+            <br>
+            <input type="text" id="Amount"><br><br>
+            <label for="Amount">Total Number Of People</label><br>
             <input type="text" id="people"><br>
+            <br><br>
+            <label for="Amount">Percentage Of Tip</label>
             <input type="text" id="tip"><br>
+            <div>
+            <p id="loading"><img src="https://loading.io/spinners/rolling/index.roller-ball-preloader-gif.svg" alt="Loading"></p>
+            <p id="output"></p>
+            <p id="output-1"></p>
+            </div>
             <button onclick="calculate()">Calculate</button>
         </div> 
+
     </div>
 </body>
 <script>
-    function calculate()
+    function calculate() 
     {
         var amount =  parseFloat(document.getElementById("Amount").value)
         var number =  parseFloat(document.getElementById("people").value)
@@ -31,9 +104,13 @@
         {
         var total = amount + (amount*tip)/100
         var given_amount = total/number
-        }console.log(given_amount)
-    }  
-    
+        setTimeout(function() {
+    document.querySelector("#output").innerHTML= " The total amount show pay is "+total
+    document.querySelector("#output-1").innerHTML= " Share of each person "+given_amount
+    }   , 3000); 
+
+        }  
+    }
 
 </script>
 </html>

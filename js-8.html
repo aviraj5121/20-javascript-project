@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<STYLE>
+    ul
+    {
+        list-style-type: none;
+    }
+</STYLE>
+<body>
+    <h3>To Do List</h3>
+    <input type="text" id="item">
+    <button onclick="add()">Add Item</button>
+    <ul id="todo-list"></ul><br>
+    <button id="clear" onclick="remove()">Clear</button>
+    
+</body>
+<script>
+    let todoList = document.getElementById("todo-list");
+
+    function add()
+    {   
+
+        let list = document.querySelector("#item").value
+        let todoItem = document.createElement("li");
+        todoItem.innerHTML=list
+        todoList.appendChild(todoItem);
+        document.querySelector("#item").value = ""
+    }
+    function remove()
+    {
+        var parent=document.getElementById("todo-list")
+        let item = parent.firstElementChild;
+        parent.removeChild(item)
+    }
+</script>
+</html>

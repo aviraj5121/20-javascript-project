@@ -1,0 +1,21 @@
+
+#box-1
+{
+    position: absolute;
+    left: 25%;
+}
+.but
+{
+    margin: 0px;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    font-size: medium;
+}
+.but-1 
+{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: medium;
+}

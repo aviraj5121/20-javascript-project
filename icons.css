@@ -1,0 +1,54 @@
+.box-2
+{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+article
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border: 1px solid;
+    margin: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+#sidebar 
+{
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    background: #f1f1f1;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+#sidebar.open 
+{
+    right: 0;
+}
+#sidebar.close
+{
+    right: -300px;
+}
+#close-sidebar
+{
+    float: right;
+}   
+#notepad
+{
+    width: 90%;
+    height: 300px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+}

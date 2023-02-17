@@ -66,7 +66,7 @@ var ball = {
   // Move the paddle with the mouse
   function movePaddle(event) {
     var paddle = document.getElementById("paddle");
-    var paddleRect = paddle.getBoundingClientRect();
+    var paddleRect = paddle.getBoundingClientRect();  
     var x = event.clientX - paddleRect.width / 2;
     if (x < 0) {
       x = 0;

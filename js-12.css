@@ -1,0 +1,33 @@
+body
+{
+    background-image: linear-gradient(to right bottom, #eebd89, #f99b77, #ff747c, #f54e96, #d13abd);
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+}
+.box-1
+{
+    position: absolute;
+    top: 50%;
+    transform: translate(70% , -50%);
+    border: 3px solid;
+    background: linear-gradient();
+    box-shadow: 0 0 10px #eebd89,  0 0 40px #d13abd;
+}
+textarea
+{
+    width: 700px;
+    height: 300px;
+    min-width: 300px;
+    font-size: 16px;
+    padding: 10px;
+    background-color: rgba(61, 0, 0, 0.865);
+    color: white;
+}
+p
+{
+    position: absolute;
+    top: 70%;
+    left: 39%;
+    font-size: 20px;
+
+}

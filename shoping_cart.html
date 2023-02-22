@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="shopping_cart.css">
+    
     <title>Document</title>
 </head>
 <body>
@@ -26,8 +28,8 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN4qZ10s4Gd8QEf4XirAxNvy6G8Kp6XsqK_w&usqp=CAU">
             <div class="info">
                 <p class="Name"><b>All Black Shoes </b></p>
-                <p class="price"> $50</p>
-                <button>Add To Card</button>
+                <p class="price">50</p>
+                <button onclick="openSidebar()">Add To Card</button>
             </div>
         </div>
         <div class="card">
@@ -35,7 +37,7 @@
             <div class="info">
                 <p class="Name"><b>All Black Shoes </b></p>
                 <p class="price"> $50</p>
-                <button>Add To Card</button>
+                <button onclick="openSidebar()">Add To Card</button>
             </div>
         </div>
         <div class="card">
@@ -43,12 +45,15 @@
             <div class="info">
                 <p class="Name"><b>All Black Shoes </b></p>
                 <p class="price"> $50</p>
-                <button>Add To Card</button>
+                <button onclick="openSidebar()">Add To Card</button>
             </div>
-        </div>
-        <div class="sidebar" id="sidebar">
-            
         </div>
     </main>
+    <div class="sidebar" id="sidebar">
+        <h6> CART <span class="material-symbols-outlined" id="closeSidebar">close</span> </h6>
+        <table id="carttable"></table>
+    </div>
 </body>
+<script src="shopping_cart.js"></script>
 </html>
+

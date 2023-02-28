@@ -26,12 +26,12 @@
         <div class="box-1">
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="shoes">
-                <span class="material-symbols-outlined">favorite</span>
+                <span class="material-symbols-outlined" id="liked">favorite</span>
             </div>
             <div class="info">
                 <p>sdfdfsdfdfs</p>
                 <p>asdasdasdad</p>
-                <button onclick="buy()">Buy</button>
+                <button onclick="buy()" id="open">Buy</button>
                 <button onclick="add()">Add To cart</button>
             </div>  
         </div>
@@ -39,8 +39,16 @@
     </section>
     <section class="section_2">
     </section>
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
         <h3>Sidebar</h3>
     </div>
+    <script src="clone_1.js"></script>
+    <div id="popup" class="hidden">
+        <h2>Popup Title</h2>
+        <p>Popup content goes here.</p>
+        <button id="close-popup">Close</button>
+    </div>
+
+
 </body>
 </html>

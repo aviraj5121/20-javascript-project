@@ -28,6 +28,7 @@ app.post('/weather', (req ,res)=> {
         if (error) {
             throw new Error(error);
         }
+        console.log(response)
         const data = JSON.parse(body);
         let table = '<table>';
         table += '<tr><th>Title</th><th>Artist</th><th>Image</th><th>Lyrics Url</th></tr>';
